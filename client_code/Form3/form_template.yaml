@@ -1,0 +1,84 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: rich_text_1
+    properties: {content: 'The team aljdfoljawf ioajflknasdfkjjeklajfo;ijflk
+
+        efjklnkwfh
+
+        efkljefhwklfgv
+
+        efknwsefhklwsf
+
+        enfjklnoefjwlkwsngfv
+
+        efvnwkjenwsefgvns
+
+        kasdfmlkaejsfl;ekawmf;lj egojkeflkmslkdfg
+
+        elfkmnklwejvklmsfgv
+
+
+
+
+
+
+
+        efjdfjsklmswefg
+
+        efgv;klvkmnsg.
+
+        esgmnlkwsnmg;klmeg
+
+        eglml;km;eglw
+
+        ;klawegm;klmeg;klmwsg;
+
+        ;lmg;lmwsmg;oem;lg;lsmeg
+
+
+
+
+
+        ejwgkl
+
+        fegh
+
+        '}
+    type: RichText
+    layout_properties: {grid_position: 'MTIPHU,XVMOUE'}
+  - name: map_1
+    properties: {height: 264}
+    type: GoogleMap
+    layout_properties: {grid_position: 'WLARLF,MLAOBG'}
+    event_bindings: {bounds_changed: map_1_bounds_changed, show: map_1_show}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- name: label_1
+  properties: {text: Hello World}
+  type: Label
+  layout_properties: {slot: title}
+- name: linear_panel_1
+  properties: {}
+  type: LinearPanel
+  layout_properties: {slot: left-nav}
+  components:
+  - name: link_1
+    properties: {text: Home, bold: true}
+    type: Link
+    layout_properties: {}
+    event_bindings: {click: link_1_click}
+  - name: link_2
+    properties: {text: Meet The Team, bold: true}
+    type: Link
+    layout_properties: {}
+    event_bindings: {click: link_2_click}

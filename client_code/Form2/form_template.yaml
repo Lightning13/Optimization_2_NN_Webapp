@@ -1,0 +1,82 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: linear_panel_2
+    properties: {}
+    type: LinearPanel
+    layout_properties: {grid_position: 'OAGWFI,SXUVHK'}
+    components:
+    - name: link_7
+      properties: {}
+      type: Link
+      components:
+      - name: image_5
+        properties: {source: _/theme/tree-736885_1280.jpg}
+        type: Image
+        layout_properties: {grid_position: 'UTEMFK,LZJLRA'}
+    - name: link_6
+      properties: {}
+      type: Link
+      components:
+      - name: image_4
+        properties: {source: _/theme/tree-736885_1280.jpg}
+        type: Image
+        layout_properties: {grid_position: 'DJTVYP,QQHKCD'}
+    - name: link_3
+      properties: {text: ''}
+      type: Link
+      layout_properties: {}
+      event_bindings: {click: link_3_click}
+      components:
+      - name: image_1
+        properties: {source: _/theme/tree-736885_1280.jpg}
+        type: Image
+        layout_properties: {grid_position: 'JBZKTH,FQABOG'}
+    - name: link_4
+      properties: {text: ''}
+      type: Link
+      event_bindings: {click: link_4_click}
+      components:
+      - name: image_2
+        properties: {source: _/theme/tree-736885_1280.jpg}
+        type: Image
+        layout_properties: {grid_position: 'MSZSTT,KRYURA'}
+    - name: link_5
+      properties: {text: ''}
+      type: Link
+      layout_properties: {}
+      components:
+      - name: image_3
+        properties: {source: _/theme/tree-736885_1280.jpg}
+        type: Image
+        layout_properties: {grid_position: 'LLUEHP,YPNDWQ'}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- name: label_1
+  properties: {text: Hello World}
+  type: Label
+  layout_properties: {slot: title}
+- name: linear_panel_1
+  properties: {}
+  type: LinearPanel
+  layout_properties: {slot: left-nav}
+  components:
+  - name: link_1
+    properties: {text: Home, bold: true}
+    type: Link
+    layout_properties: {}
+    event_bindings: {click: link_1_click}
+  - name: link_2
+    properties: {text: About, bold: true}
+    type: Link
+    layout_properties: {}
+    event_bindings: {click: link_2_click}

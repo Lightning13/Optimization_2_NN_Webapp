@@ -1,5 +1,11 @@
 from ._anvil_designer import Form1Template
 from anvil import *
+import anvil.google.auth, anvil.google.drive
+from anvil.google.drive import app_files
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
+import anvil.users
 import anvil.server
 import base64
 
@@ -8,6 +14,8 @@ class Form1(Form1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    anvil.users.login_with_form()
+    # self.image_1.source = "https://drive.google.com/file/d/1UkH_oeokSDxOd2D5Xx8rV2c5hpyLiKxt/view?usp=sharing"
 
     # Any code you write here will run before the form opens.
 
@@ -37,4 +45,14 @@ class Form1(Form1Template):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.text_test.text = anvil.server.call(str('sum_1'))
+    pass
+
+  def link_1_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("Form2")
+    pass
+
+  def link_2_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("Form3")
     pass
