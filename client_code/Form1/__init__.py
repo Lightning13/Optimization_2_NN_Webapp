@@ -66,3 +66,6 @@ class Form1(Form1Template):
     self.button_2.visible = False
     self.status_text.text = "Ready for new file"
     pass
+
+
+
