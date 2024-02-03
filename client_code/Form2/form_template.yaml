@@ -18,7 +18,7 @@ components:
       type: Link
       components:
       - name: image_5
-        properties: {source: _/theme/tree-736885_1280.jpg}
+        properties: {source: _/theme/WhatsApp Image 2024-02-03 at 00.53.23.jpeg}
         type: Image
         layout_properties: {grid_position: 'UTEMFK,LZJLRA'}
     - name: link_6
@@ -26,9 +26,10 @@ components:
       type: Link
       components:
       - name: image_4
-        properties: {source: _/theme/tree-736885_1280.jpg}
+        properties: {source: _/theme/Screenshot 2024-02-03 005402.png}
         type: Image
         layout_properties: {grid_position: 'DJTVYP,QQHKCD'}
+      event_bindings: {click: link_6_click}
     - name: link_3
       properties: {text: ''}
       type: Link
@@ -36,7 +37,7 @@ components:
       event_bindings: {click: link_3_click}
       components:
       - name: image_1
-        properties: {source: _/theme/tree-736885_1280.jpg}
+        properties: {source: _/theme/4c52f960-d57c-4e7f-90f5-fcc2493ed9e1.jpg}
         type: Image
         layout_properties: {grid_position: 'JBZKTH,FQABOG'}
     - name: link_4

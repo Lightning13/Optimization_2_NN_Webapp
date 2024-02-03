@@ -25,13 +25,18 @@ class Form2(Form2Template):
     open_form("Form3")
     pass
 
-  def link_3_click(self, **event_args):
+  def link_7_click(self, **event_args):
     """This method is called when the link is clicked"""
-    self.link_3.url = "https://www.linkedin.com/in/abhijit-anil-9a409b15a"
+    self.link_7.url = "https://www.linkedin.com/in/abhijit-anil-9a409b15a"
     pass
 
-  def link_4_click(self, **event_args):
+  def link_6_click(self, **event_args):
     """This method is called when the link is clicked"""
-    self.link_4.url = "https://github.com/Lightning13"
+    self.link_6.url = "https://www.linkedin.com/in/biyunyuan/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+    pass
+
+  def link_3_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    self.link_3.url = "https://www.linkedin.com/in/rahull-borana/"
     pass
 
