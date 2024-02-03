@@ -7,8 +7,30 @@ components:
   properties: {col_widths: '{}'}
   name: content_panel
   layout_properties: {slot: default}
-  components: []
+  components:
+  - name: image_1
+    properties: {}
+    type: Image
+    layout_properties: {grid_position: 'RUOPWS,CCWQJT'}
+  - name: text_test
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'EQTOGH,LQFLFY'}
+  - name: button_1
+    properties: {text: button_1}
+    type: Button
+    layout_properties: {grid_position: 'GOVZMV,DNZOEI'}
+    event_bindings: {click: button_1_click}
+  - name: uploader
+    properties: {}
+    type: FileLoader
+    layout_properties: {grid_position: 'VODTGM,GMIBEP'}
+    event_bindings: {change: uploader_change}
 - type: FlowPanel
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+- name: label_1
+  properties: {text: Hello World}
+  type: Label
+  layout_properties: {slot: title}
