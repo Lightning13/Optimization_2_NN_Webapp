@@ -7,6 +7,9 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.users
 import anvil.server
+# Add these imports to your form
+from anvil.js.window import jQuery
+from anvil.js import get_dom_node
 
 class Form3(Form3Template):
   def __init__(self, **properties):
@@ -23,6 +26,12 @@ class Form3(Form3Template):
     position=GoogleMap.LatLng(30.284215739792057, -97.73782819066138)
     )
     self.map_1.add_component(marker)
+
+   # Create an iframe element and set the src
+    iframe = jQuery("<iframe width='100%' height='800px'>").attr("src","https://news.utexas.edu/")
+    # Append the iframe to a container in our form
+    iframe.appendTo(get_dom_node(self.content_panel))
+    js.call_js('window.open', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ')
     
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
