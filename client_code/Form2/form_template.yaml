@@ -21,6 +21,7 @@ components:
         properties: {source: _/theme/WhatsApp Image 2024-02-03 at 00.53.23.jpeg}
         type: Image
         layout_properties: {grid_position: 'UTEMFK,LZJLRA'}
+      event_bindings: {click: link_7_click}
     - name: link_6
       properties: {}
       type: Link
