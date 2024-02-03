@@ -36,14 +36,16 @@ components:
     properties: {height: 362, display_mode: zoom_to_fill, source: _/theme/RNN_Tutorial.avif,
       spacing_above: large, spacing_below: large}
     type: Image
-    layout_properties: {grid_position: 'DXNWTL,IEYHLW'}
+    layout_properties: {grid_position: 'DXNWTL,IEYHLW JVEKCM,MHDYPO'}
     data_bindings: []
     event_bindings: {}
   - name: button_2
-    properties: {text: 'Retry?', bold: true}
+    properties: {text: 'Retry?', role: elevated-button, bold: true, underline: false,
+      font_size: 19, icon_align: left, background: 'theme:Primary Container', foreground: ''}
     type: Button
-    layout_properties: {grid_position: 'DXNWTL,IEYHLW XVPOQG,MLMVDM'}
+    layout_properties: {grid_position: 'DXNWTL,IEYHLW PRJDBY,HYRVFX', full_width_row: false}
     event_bindings: {click: button_2_click}
+    data_bindings: []
   - name: spacer_1
     properties: {height: 32}
     type: Spacer
