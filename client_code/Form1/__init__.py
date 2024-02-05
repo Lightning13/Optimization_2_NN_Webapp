@@ -31,9 +31,11 @@ class Form1(Form1Template):
         # # self.image_1.source = anvil.BlobMedia(content=bytes(image_data, 'utf-8'), content_type='image/png')
 
         # self.image_1.source = 'https://drive.google.com/file/d/1UkH_oeokSDxOd2D5Xx8rV2c5hpyLiKxt/view?usp=sharing'
-        self.image_1.source = anvil.server.call('process_csv', file)
+        self.image_1.source, predicted_class,class_probability = anvil.server.call('process_csv', file)
         self.uploader.visible = False
         self.status_text.text = "Processed"
+        self.label_3.text = 'Class: '+str(predicted_class)
+        self.label_2.text = 'Class Probability: '+str(class_probability)
         self.button_2.visible = True
     else:
         self.status_text.text = "Wrong file type. Please upload a CSV file"
