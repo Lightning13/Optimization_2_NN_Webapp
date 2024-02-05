@@ -20,7 +20,6 @@ class Form3(Form3Template):
     # Set the latitude and longitude of the map to the desired location
     self.map_1.center = GoogleMap.LatLng(30.284215739792057, -97.73782819066138)
     self.map_1.zoom = 20
-
     marker = GoogleMap.Marker(
     animation=GoogleMap.Animation.DROP,
     position=GoogleMap.LatLng(30.284215739792057, -97.73782819066138)
@@ -49,6 +48,13 @@ class Form3(Form3Template):
 
   def map_1_show(self, **event_args):
     """This method is called when the GoogleMap is shown on the screen"""
+    pass
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    test = anvil.server.call('read_about')
+    print(test)
+    self.rich_text_1.content = anvil.server.call(str('read_about'))
     pass
 
 

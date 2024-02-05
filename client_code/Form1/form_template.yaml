@@ -36,7 +36,7 @@ components:
     properties: {height: 362, display_mode: zoom_to_fill, source: _/theme/RNN_Tutorial.avif,
       spacing_above: large, spacing_below: large}
     type: Image
-    layout_properties: {grid_position: 'DXNWTL,IEYHLW JVEKCM,MHDYPO'}
+    layout_properties: {grid_position: 'DXNWTL,IEYHLW JVEKCM,MHDYPO', full_width_row: true}
     data_bindings: []
     event_bindings: {}
   - name: button_2
