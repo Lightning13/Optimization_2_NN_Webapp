@@ -11,10 +11,14 @@ import base64
 
 
 class Form1(Form1Template):
+  gv_data = []
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.button_2.visible = False
+    self.button_3.visible = False
+    self.button_4.visible = False
+    self.label_4.text ='Please upload a 28 x 28 csv file'
     # Any code you write here will run before the form opens.
 
   def uploader_change(self, file, **event_args):
@@ -22,30 +26,33 @@ class Form1(Form1Template):
     if file is None:
         self.status_text.text = "No file uploaded"
     elif file.name.endswith('.csv'):
-        self.status_text.text = "CSV file uploaded. Processing..."
-        # pixel_intensities = anvil.server.call('process_csv', file)
-        # # Convert the pixel intensities to base64-encoded image data
-        # image_data = anvil.server.call('create_image_data',pixel_intensities)
-
-        # # Set the source of the image component to the base64-encoded image data
-        self.image_1.source, predicted_class,class_probability = anvil.server.call('process_csv', file)
-        # self.uploader.visible = False
-        # self.label_4.visible = False
-        # self.status_text.text = "Processed"
-        self.label_3.text = 'Class: '+str(predicted_class)
-        self.label_2.text = 'Class Probability: '+str(class_probability)
-        self.button_2.visible = True
+        validate = anvil.server.call('validate_file', file)
+        if validate == 4:
+          self.status_text.text = "CSV file uploaded. Awaiting Model Selection"
+          #Process the image
+          self.image_1.source, self.gv_data = anvil.server.call('display_image', file)
+          self.label_4.text ='File converted to image'
+          self.button_3.visible = True
+          self.button_4.visible = True
+          self.rich_text_1.content = 'Which Model would you like to try?'
+        elif validate == 1:
+          self.status_text.text = "File is not 28 x 28. Please upload a valid file"
+          self.uploader.clear()
+          self.uploader.text = "Re-Upload"
+        elif validate == 2:
+          self.status_text.text = "File contains non-numeric values"
+          self.uploader.clear()
+          self.uploader.text = "Re-Upload"
+        elif validate == 3:
+          self.status_text.text = "File contains values outside the range [0, 255]"
+          self.uploader.clear()
+          self.uploader.text = "Re-Upload"
     else:
         self.status_text.text = "Wrong file type. Please upload a CSV file"
         self.uploader.clear()
         self.uploader.text = "Re-Upload"
 
     pass      
-
-  def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    self.status_text.text = anvil.server.call(str('sum_1'))
-    pass
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -60,16 +67,56 @@ class Form1(Form1Template):
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.uploader.clear()
+    self.label_3.text = ''
+    self.label_2.text = ''
     self.image_1.source = "_/theme/RNN_Tutorial.avif"
     self.uploader.visible = True
     self.label_4.visible = True
     self.button_2.visible = False
     self.status_text.text = "Ready for new file"
+    self.label_4.text ='Please upload a 28 x 28 csv file'
+    self.rich_text_1.content = ''
+
     pass
 
   def link_3_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("Form4")
+    pass
+
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.status_text.text = "CNN model running"
+    predicted_class,class_probability = anvil.server.call('process_csv', self.gv_data)
+    #Hide/Unhide buttons
+    self.uploader.visible = False
+    self.label_4.visible = False
+    self.status_text.text = "Processed"
+    self.label_3.text = 'Class: '+str(predicted_class)
+    self.label_2.text = 'Class Probability: '+str(class_probability)
+    self.button_2.visible = True
+
+    self.rich_text_1.content = 'CNN Model Performance'
+    self.button_3.visible = False
+    self.button_4.visible = False
+  
+    pass
+
+  def button_4_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.status_text.text = "Transformer model running"
+    predicted_class,class_probability = anvil.server.call('process_csv', self.gv_data)
+    #Hide/Unhide buttons
+    self.uploader.visible = False
+    self.label_4.visible = False
+    self.status_text.text = "Processed"
+    self.label_3.text = 'Class: '+str(predicted_class)
+    self.label_2.text = 'Class Probability: '+str(class_probability)
+    self.button_2.visible = True
+
+    self.rich_text_1.content = 'Transformer Model Performance'
+    self.button_3.visible = False
+    self.button_4.visible = False
     pass
 
 
