@@ -18,6 +18,11 @@ components:
     properties: {align: left}
     type: RichText
     layout_properties: {grid_position: 'ONUFFQ,HACWKA'}
+  - name: button_1
+    properties: {text: 'Dive into our models?'}
+    type: Button
+    layout_properties: {grid_position: 'BERJSO,DOELFR'}
+    event_bindings: {click: button_1_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
@@ -32,7 +37,7 @@ components:
   layout_properties: {slot: left-nav}
   components:
   - name: link_1
-    properties: {text: Home, bold: true}
+    properties: {text: Models, bold: true}
     type: Link
     layout_properties: {}
     event_bindings: {click: link_1_click}

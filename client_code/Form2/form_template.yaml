@@ -102,7 +102,7 @@ components:
     event_bindings: {click: link_8_click}
     layout_properties: {}
   - name: link_1
-    properties: {text: Home, bold: true}
+    properties: {text: Models, bold: true}
     type: Link
     layout_properties: {}
     event_bindings: {click: link_1_click}
