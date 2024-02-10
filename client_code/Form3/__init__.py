@@ -17,6 +17,9 @@ class Form3(Form3Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+    file = 'test_html_text.txt'
+    self.rich_text_1.content = anvil.server.call('read_about',file)
+    
     # Set the latitude and longitude of the map to the desired location
     self.map_1.center = GoogleMap.LatLng(30.284215739792057, -97.73782819066138)
     self.map_1.zoom = 20
@@ -30,7 +33,7 @@ class Form3(Form3Template):
     iframe = jQuery("<iframe width='100%' height='800px'>").attr("src","https://news.utexas.edu/")
     # Append the iframe to a container in our form
     iframe.appendTo(get_dom_node(self.content_panel))
-    js.call_js('window.open', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+    # js.call_js('window.open', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ')
     
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -50,11 +53,9 @@ class Form3(Form3Template):
     """This method is called when the GoogleMap is shown on the screen"""
     pass
 
-  def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    test = anvil.server.call('read_about')
-    print(test)
-    self.rich_text_1.content = anvil.server.call(str('read_about'))
+  def link_3_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("Form4")
     pass
 
 

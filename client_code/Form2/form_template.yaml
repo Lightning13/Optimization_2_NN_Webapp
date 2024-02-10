@@ -64,7 +64,7 @@ components:
   name: navbar_links
   layout_properties: {slot: nav-right}
 - name: label_1
-  properties: {text: Hello World}
+  properties: {text: Team 28}
   type: Label
   layout_properties: {slot: title}
 - name: linear_panel_1
@@ -72,6 +72,11 @@ components:
   type: LinearPanel
   layout_properties: {slot: left-nav}
   components:
+  - name: link_8
+    properties: {text: Welcome Page, bold: true}
+    type: Link
+    event_bindings: {click: link_8_click}
+    layout_properties: {}
   - name: link_1
     properties: {text: Home, bold: true}
     type: Link

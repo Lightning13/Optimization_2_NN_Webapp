@@ -8,53 +8,8 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
-  - name: button_1
-    properties: {text: button_1}
-    type: Button
-    layout_properties: {grid_position: 'AXNDSN,XYQVVR'}
-    event_bindings: {click: button_1_click}
   - name: rich_text_1
-    properties: {content: 'The team aljdfoljawf ioajflknasdfkjjeklajfo;ijflk
-
-        efjklnkwfh
-
-        efkljefhwklfgv
-
-        efknwsefhklwsf
-
-        enfjklnoefjwlkwsngfv
-
-        efvnwkjenwsefgvns
-
-        kasdfmlkaejsfl;ekawmf;lj egojkeflkmslkdfg
-
-        elfkmnklwejvklmsfgv
-
-
-
-
-
-
-
-        efjdfjsklmswefg
-
-        efgv;klvkmnsg.
-
-        esgmnlkwsnmg;klmeg
-
-        eglml;km;eglw
-
-        ;klawegm;klmeg;klmwsg;
-
-        ;lmg;lmwsmg;oem;lg;lsmeg
-
-
-
-
-
-        ejwgkl
-
-        fegh
+    properties: {content: '
 
         '}
     type: RichText
@@ -69,7 +24,7 @@ components:
   name: navbar_links
   layout_properties: {slot: nav-right}
 - name: label_1
-  properties: {text: Hello World}
+  properties: {text: Team 28}
   type: Label
   layout_properties: {slot: title}
 - name: linear_panel_1
@@ -77,6 +32,11 @@ components:
   type: LinearPanel
   layout_properties: {slot: left-nav}
   components:
+  - name: link_3
+    properties: {text: Welcome Page, bold: true}
+    type: Link
+    layout_properties: {}
+    event_bindings: {click: link_3_click}
   - name: link_1
     properties: {text: Home, bold: true}
     type: Link

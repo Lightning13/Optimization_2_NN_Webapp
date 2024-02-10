@@ -15,6 +15,11 @@ class Form4(Form4Template):
 
     # Any code you write here will run before the form opens.
     anvil.users.login_with_form()
+  
+    file = 'test_html_text.txt'
+    self.rich_text_2.content = anvil.server.call('read_about',file)
+    
+    
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -24,4 +29,9 @@ class Form4(Form4Template):
   def link_2_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("Form2")
+    pass
+
+  def link_3_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("Form3")
     pass

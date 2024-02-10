@@ -68,5 +68,10 @@ class Form1(Form1Template):
     self.status_text.text = "Ready for new file"
     pass
 
+  def link_3_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("Form4")
+    pass
+
 
 
