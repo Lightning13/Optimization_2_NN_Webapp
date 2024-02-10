@@ -14,23 +14,20 @@ components:
     layout_properties: {grid_position: 'OAGWFI,SXUVHK'}
     components:
     - name: link_7
-      properties: {}
+      properties: {border: ''}
       type: Link
       components:
       - name: image_5
         properties: {source: _/theme/WhatsApp Image 2024-02-03 at 00.53.23.jpeg}
         type: Image
         layout_properties: {grid_position: 'UTEMFK,LZJLRA'}
+      - name: label_2
+        properties: {text: Abhijit, align: center}
+        type: Label
+        layout_properties: {grid_position: 'DYZLCP,DDKDZM'}
       event_bindings: {click: link_7_click}
-    - name: link_6
-      properties: {}
-      type: Link
-      components:
-      - name: image_4
-        properties: {source: _/theme/Screenshot 2024-02-03 005402.png}
-        type: Image
-        layout_properties: {grid_position: 'DJTVYP,QQHKCD'}
-      event_bindings: {click: link_6_click}
+      layout_properties: {}
+      data_bindings: []
     - name: link_3
       properties: {text: ''}
       type: Link
@@ -41,15 +38,10 @@ components:
         properties: {source: _/theme/4c52f960-d57c-4e7f-90f5-fcc2493ed9e1.jpg}
         type: Image
         layout_properties: {grid_position: 'JBZKTH,FQABOG'}
-    - name: link_4
-      properties: {text: ''}
-      type: Link
-      event_bindings: {click: link_4_click}
-      components:
-      - name: image_2
-        properties: {source: _/theme/tree-736885_1280.jpg}
-        type: Image
-        layout_properties: {grid_position: 'MSZSTT,KRYURA'}
+      - name: label_4
+        properties: {text: Rahul, align: center}
+        type: Label
+        layout_properties: {grid_position: 'RBXSMQ,QEANPU'}
     - name: link_5
       properties: {text: ''}
       type: Link
@@ -59,6 +51,38 @@ components:
         properties: {source: _/theme/tree-736885_1280.jpg}
         type: Image
         layout_properties: {grid_position: 'LLUEHP,YPNDWQ'}
+      - name: label_6
+        properties: {text: Zoe, align: center}
+        type: Label
+        layout_properties: {grid_position: 'QBJQID,PRBCZE'}
+  - name: link_6
+    properties: {}
+    type: Link
+    components:
+    - name: image_4
+      properties: {source: _/theme/Screenshot 2024-02-03 005402.png}
+      type: Image
+      layout_properties: {grid_position: 'HZZDTX,WGCVTO'}
+    event_bindings: {click: link_6_click}
+    layout_properties: {grid_position: 'OAGWFI,YLIRKJ CHVPXM,DXBDFM'}
+  - name: label_3
+    properties: {text: June, align: center}
+    type: Label
+    layout_properties: {grid_position: 'OAGWFI,YLIRKJ OUMLPF,KSUGVX'}
+  - name: link_4
+    properties: {text: ''}
+    type: Link
+    event_bindings: {click: link_4_click}
+    components:
+    - name: image_2
+      properties: {source: _/theme/WhatsApp Image 2024-02-03 at 11.46.55.jpeg}
+      type: Image
+      layout_properties: {grid_position: 'IUODQT,MAXDHO'}
+    - name: label_5
+      properties: {text: Karthick, align: center}
+      type: Label
+      layout_properties: {grid_position: 'LAAYAH,GFYFMQ'}
+    layout_properties: {grid_position: 'OAGWFI,YLIRKJ ZDTZGR,WRIKOS'}
 - type: FlowPanel
   properties: {}
   name: navbar_links

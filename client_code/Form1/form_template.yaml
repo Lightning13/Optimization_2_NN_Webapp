@@ -16,11 +16,6 @@ components:
     properties: {text: Ready for Upload, bold: true}
     type: Label
     layout_properties: {grid_position: 'EQTOGH,LQFLFY'}
-  - name: button_1
-    properties: {text: '4 + 5 = ?', bold: true, font_size: 17}
-    type: Button
-    layout_properties: {grid_position: 'GOVZMV,DNZOEI'}
-    event_bindings: {click: button_1_click}
   - name: uploader
     properties: {align: center, file_types: .csv, text: Upload, font_size: 18, spacing_above: small,
       spacing_below: none, italic: false, bold: true, underline: true, multiple: false}
@@ -43,6 +38,20 @@ components:
     layout_properties: {grid_position: 'DXNWTL,IEYHLW JVEKCM,MHDYPO', full_width_row: true}
     data_bindings: []
     event_bindings: {}
+  - name: rich_text_1
+    properties: {align: center, content: ''}
+    type: RichText
+    layout_properties: {grid_position: 'DXNWTL,IEYHLW TZKUQB,ZENFUN'}
+  - name: button_3
+    properties: {text: CNN}
+    type: Button
+    layout_properties: {grid_position: 'DXNWTL,IEYHLW WRPITC,AYEIGX'}
+    event_bindings: {click: button_3_click}
+  - name: button_4
+    properties: {text: Transformer}
+    type: Button
+    layout_properties: {grid_position: 'DXNWTL,IEYHLW WRPITC,XYUKIS'}
+    event_bindings: {click: button_4_click}
   - name: label_3
     properties: {align: center, bold: true}
     type: Label
