@@ -28,12 +28,10 @@ class Form1(Form1Template):
         # image_data = anvil.server.call('create_image_data',pixel_intensities)
 
         # # Set the source of the image component to the base64-encoded image data
-        # # self.image_1.source = anvil.BlobMedia(content=bytes(image_data, 'utf-8'), content_type='image/png')
-
-        # self.image_1.source = 'https://drive.google.com/file/d/1UkH_oeokSDxOd2D5Xx8rV2c5hpyLiKxt/view?usp=sharing'
         self.image_1.source, predicted_class,class_probability = anvil.server.call('process_csv', file)
-        self.uploader.visible = False
-        self.status_text.text = "Processed"
+        # self.uploader.visible = False
+        # self.label_4.visible = False
+        # self.status_text.text = "Processed"
         self.label_3.text = 'Class: '+str(predicted_class)
         self.label_2.text = 'Class Probability: '+str(class_probability)
         self.button_2.visible = True
@@ -64,6 +62,7 @@ class Form1(Form1Template):
     self.uploader.clear()
     self.image_1.source = "_/theme/RNN_Tutorial.avif"
     self.uploader.visible = True
+    self.label_4.visible = True
     self.button_2.visible = False
     self.status_text.text = "Ready for new file"
     pass

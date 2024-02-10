@@ -21,17 +21,21 @@ import anvil.server
 import io
 import base64
 @anvil.server.callable
-def create_image_data(pixel_intensities):
-    # Convert pixel intensities to grayscale image data
-    max_intensity = max(max(row) for row in pixel_intensities)
-    image_data = bytearray()
+def upload_press():
+  self.uploader.visible = False
+  self.label_4.visible = False
+  self.status_text.text = "Processed"
+# def create_image_data(pixel_intensities):
+#     # Convert pixel intensities to grayscale image data
+#     max_intensity = max(max(row) for row in pixel_intensities)
+#     image_data = bytearray()
 
-    for row in pixel_intensities:
-        for intensity in row:
-            # Scale intensity to 0-255 range
-            scaled_intensity = int(intensity * 255 / max_intensity)
-            image_data.extend((scaled_intensity,))
+#     for row in pixel_intensities:
+#         for intensity in row:
+#             # Scale intensity to 0-255 range
+#             scaled_intensity = int(intensity * 255 / max_intensity)
+#             image_data.extend((scaled_intensity,))
 
-    # Encode the image data as base64
-    return base64.b64encode(bytes(image_data)).decode()
+#     # Encode the image data as base64
+#     return base64.b64encode(bytes(image_data)).decode()
   
