@@ -87,7 +87,7 @@ class Form1(Form1Template):
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.status_text.text = "CNN model running"
-    predicted_class,class_probability = anvil.server.call('process_csv', self.gv_data)
+    predicted_class,class_probability = anvil.server.call('process_csv', self.gv_data,2)
     #Hide/Unhide buttons
     self.uploader.visible = False
     self.label_4.visible = False
@@ -105,7 +105,7 @@ class Form1(Form1Template):
   def button_4_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.status_text.text = "Transformer model running"
-    predicted_class,class_probability = anvil.server.call('process_csv', self.gv_data)
+    predicted_class,class_probability = anvil.server.call('process_csv', self.gv_data,1)
     #Hide/Unhide buttons
     self.uploader.visible = False
     self.label_4.visible = False
