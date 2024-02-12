@@ -33,7 +33,7 @@ class Form3(Form3Template):
     iframe = jQuery("<iframe width='100%' height='800px'>").attr("src","https://news.utexas.edu/")
     # Append the iframe to a container in our form
     iframe.appendTo(get_dom_node(self.content_panel))
-    # js.call_js('window.open', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+    js.call_js('window.open', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ')
     
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
