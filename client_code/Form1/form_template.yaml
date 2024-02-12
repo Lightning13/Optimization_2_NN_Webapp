@@ -4,7 +4,8 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{"IEYHLW":60,"EHQFZX":10,"BPHXZM":10,"PXNMNZ":5,"LQFLFY":55}'}
+  properties: {col_widths: '{"IEYHLW":60,"EHQFZX":10,"BPHXZM":10,"PXNMNZ":5,"LQFLFY":55}',
+    role: elevated-card}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -32,7 +33,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'DXNWTL,BPHXZM'}
   - name: image_1
-    properties: {height: 362, display_mode: zoom_to_fill, source: _/theme/RNN_Tutorial.avif,
+    properties: {height: 606, display_mode: zoom_to_fill, source: _/theme/RNN_Tutorial.avif,
       spacing_above: large, spacing_below: large}
     type: Image
     layout_properties: {grid_position: 'DXNWTL,IEYHLW JVEKCM,MHDYPO', full_width_row: true}
@@ -43,12 +44,14 @@ components:
     type: RichText
     layout_properties: {grid_position: 'DXNWTL,IEYHLW TZKUQB,ZENFUN'}
   - name: button_3
-    properties: {text: CNN}
+    properties: {text: CNN, role: elevated-button, background: 'theme:Secondary Container',
+      bold: true}
     type: Button
     layout_properties: {grid_position: 'DXNWTL,IEYHLW WRPITC,AYEIGX'}
     event_bindings: {click: button_3_click}
   - name: button_4
-    properties: {text: Transformer}
+    properties: {text: Transformer, role: elevated-button, background: 'theme:Secondary
+        Container', bold: true}
     type: Button
     layout_properties: {grid_position: 'DXNWTL,IEYHLW WRPITC,XYUKIS'}
     event_bindings: {click: button_4_click}

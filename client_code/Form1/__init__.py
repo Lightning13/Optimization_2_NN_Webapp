@@ -37,18 +37,22 @@ class Form1(Form1Template):
           self.rich_text_1.content = 'Which Model would you like to try?'
         elif validate == 1:
           self.status_text.text = "File is not 28 x 28. Please upload a valid file"
+          alert("File is not 28 x 28. Please upload a valid file")
           self.uploader.clear()
           self.uploader.text = "Re-Upload"
         elif validate == 2:
           self.status_text.text = "File contains non-numeric values"
+          alert("File contains non-numeric values")
           self.uploader.clear()
           self.uploader.text = "Re-Upload"
         elif validate == 3:
           self.status_text.text = "File contains values outside the range [0, 255]"
+          alert("File contains values outside the range [0, 255]")
           self.uploader.clear()
           self.uploader.text = "Re-Upload"
     else:
         self.status_text.text = "Wrong file type. Please upload a CSV file"
+        alert("Wrong file type. Please upload a CSV file")
         self.uploader.clear()
         self.uploader.text = "Re-Upload"
 
