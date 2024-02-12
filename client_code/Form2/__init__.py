@@ -50,3 +50,8 @@ class Form2(Form2Template):
     self.link_4.url = "https://linkedin.com/in/kkarthick12"
     pass
 
+  def link_5_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    self.link_5.url = "https://www.linkedin.com/in/hayoung-kim-840682b5/"
+    pass
+
