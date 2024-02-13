@@ -18,6 +18,9 @@ class Form4(Form4Template):
   
     file = 'test_html_text.txt'
     self.rich_text_2.content = anvil.server.call('read_about',file)
+    iframe = jQuery("<iframe width='100%' height='800px'>").attr("src","https://medium.com/@abhijitanil.2/unleashing-the-power-of-convolutional-neural-networks-a-comparative-exploration-of-tensorflow-and-86a70879d3ad")
+    # Append the iframe to a container in our form
+    iframe.appendTo(get_dom_node(self.content_panel))
     
     
 

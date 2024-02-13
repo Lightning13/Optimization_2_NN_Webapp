@@ -11,25 +11,26 @@ components:
   - name: rich_text_1
     properties: {content: '**Welcome**
 
-        ', align: center, font_size: 20}
+        ', align: center, font_size: 20, background: ''}
     type: RichText
     layout_properties: {grid_position: 'MTIPHU,XVMOUE'}
+    data_bindings: []
   - name: rich_text_3
     properties: {content: 'Learn about our components:'}
     type: RichText
     layout_properties: {grid_position: 'KUYQQE,OBNYMR'}
   - name: button_2
-    properties: {text: CNN model}
+    properties: {text: CNN model, icon: 'fa:info', role: elevated-button}
     type: Button
     layout_properties: {grid_position: 'DIUNCR,TCKWVE'}
     event_bindings: {click: button_2_click}
   - name: button_3
-    properties: {text: Transformer}
+    properties: {text: Transformer, icon: 'fa:info', role: elevated-button}
     type: Button
     layout_properties: {grid_position: 'DIUNCR,PSDAIE'}
     event_bindings: {click: button_3_click}
   - name: button_4
-    properties: {text: Anvil and AWS}
+    properties: {text: Anvil and AWS, icon: 'fa:info', role: elevated-button}
     type: Button
     layout_properties: {grid_position: 'DIUNCR,XQAWJM'}
     event_bindings: {click: button_4_click}

@@ -19,5 +19,5 @@ class CNN_About(CNN_AboutTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form("Form1")
+    open_form("Form4")
     pass
