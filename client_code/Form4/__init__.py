@@ -18,9 +18,7 @@ class Form4(Form4Template):
   
     file = 'test_html_text.txt'
     self.rich_text_2.content = anvil.server.call('read_about',file)
-    iframe = jQuery("<iframe width='100%' height='800px'>").attr("src","https://medium.com/@abhijitanil.2/unleashing-the-power-of-convolutional-neural-networks-a-comparative-exploration-of-tensorflow-and-86a70879d3ad")
-    # Append the iframe to a container in our form
-    iframe.appendTo(get_dom_node(self.content_panel))
+
     
     
 
@@ -57,4 +55,9 @@ class Form4(Form4Template):
   def button_4_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("Anvil_About")
+    pass
+
+  def link_4_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    self.link_4.url = "https://medium.com/@abhijitanil.2/unleashing-the-power-of-convolutional-neural-networks-a-comparative-exploration-of-tensorflow-and-86a70879d3ad"
     pass

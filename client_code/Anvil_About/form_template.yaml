@@ -25,9 +25,9 @@ components:
   type: Button
   layout_properties: {slot: title}
   event_bindings: {click: button_1_click}
-- name: button_1_copy
+- name: button_2
   properties: {text: 'Dive into our models?', bold: true, icon: 'fa:arrow-circle-right',
     font_size: 29}
   type: Button
   layout_properties: {slot: default}
-  event_bindings: {click: button_1_click}
+  event_bindings: {click: button_2_click}

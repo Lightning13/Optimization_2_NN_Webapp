@@ -7,7 +7,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.users
 import anvil.server
-# Add these imports to your form
+# Added Imports
 from anvil.js.window import jQuery
 from anvil.js import get_dom_node
 

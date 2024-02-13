@@ -22,3 +22,8 @@ class Anvil_About(Anvil_AboutTemplate):
     """This method is called when the button is clicked"""
     open_form("Form4")
     pass
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form("Form1")
+    pass
