@@ -18,6 +18,7 @@ class Form1(Form1Template):
     self.button_2.visible = False
     self.button_3.visible = False
     self.button_4.visible = False
+    self.button_5.visible = False
     self.label_4.text ='Please upload a 28 x 28 csv file'
     # Any code you write here will run before the form opens.
 
@@ -34,6 +35,7 @@ class Form1(Form1Template):
           self.label_4.text ='File converted to image'
           self.button_3.visible = True
           self.button_4.visible = True
+          self.button_5.visible = True
           self.rich_text_1.content = 'Which Model would you like to try?'
         elif validate == 1:
           self.status_text.text = "File is not 28 x 28. Please upload a valid file"
@@ -90,7 +92,7 @@ class Form1(Form1Template):
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.status_text.text = "CNN model running"
+    self.status_text.text = "CNN (PyTorch) model running"
     predicted_class,class_probability = anvil.server.call('process_csv', self.gv_data,2)
     #Hide/Unhide buttons
     self.uploader.visible = False
@@ -100,9 +102,10 @@ class Form1(Form1Template):
     self.label_2.text = 'Class Probability: '+str(class_probability)
     self.button_2.visible = True
 
-    self.rich_text_1.content = 'CNN Model Performance'
+    self.rich_text_1.content = 'CNN (PyTorch) Model Performance'
     self.button_3.visible = False
     self.button_4.visible = False
+    self.button_5.visible = False
   
     pass
 
@@ -121,6 +124,25 @@ class Form1(Form1Template):
     self.rich_text_1.content = 'Transformer Model Performance'
     self.button_3.visible = False
     self.button_4.visible = False
+    self.button_5.visible = False
+    pass
+
+  def button_5_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.status_text.text = "CNN (TensorFlow) model running"
+    predicted_class,class_probability = anvil.server.call('process_csv', self.gv_data,3)
+    #Hide/Unhide buttons
+    self.uploader.visible = False
+    self.label_4.visible = False
+    self.status_text.text = "Processed"
+    self.label_3.text = 'Class: '+str(predicted_class)
+    self.label_2.text = 'Class Probability: '+str(class_probability)
+    self.button_2.visible = True
+
+    self.rich_text_1.content = 'CNN (Tensorflow) Model Performance'
+    self.button_3.visible = False
+    self.button_4.visible = False
+    self.button_5.visible = False
     pass
 
 
