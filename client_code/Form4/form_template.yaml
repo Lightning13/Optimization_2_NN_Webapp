@@ -9,12 +9,17 @@ components:
   layout_properties: {slot: default}
   components:
   - name: rich_text_1
-    properties: {content: '**Welcome**
+    properties: {content: '
 
         ', align: center, font_size: 20, background: ''}
     type: RichText
     layout_properties: {grid_position: 'MTIPHU,XVMOUE'}
     data_bindings: []
+    components:
+    - name: image_1
+      properties: {source: _/theme/welcome.gif, display_mode: original_size, height: 501}
+      type: Image
+      layout_properties: {}
   - name: rich_text_3
     properties: {content: '**Learn about our components:**', font_size: 15}
     type: RichText

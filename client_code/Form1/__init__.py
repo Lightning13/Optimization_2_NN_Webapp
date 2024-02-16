@@ -74,8 +74,8 @@ class Form1(Form1Template):
     """This method is called when the button is clicked"""
     self.uploader.clear()
     self.label_3.text = ''
-    self.label_2.text = ''
-    self.image_1.source = "_/theme/RNN_Tutorial.avif"
+    # self.label_2.text = ''
+    self.image_1.source = "_/theme/SvckSy7fFviqrq8ClF.gif"
     self.uploader.visible = True
     self.label_4.visible = True
     self.button_2.visible = False
@@ -99,7 +99,7 @@ class Form1(Form1Template):
     self.label_4.visible = False
     self.status_text.text = "Processed"
     self.label_3.text = 'Class: '+str(predicted_class)
-    self.label_2.text = 'Model Accuracy: '+str(class_probability)
+    # self.label_2.text = 'Model Accuracy: '+str(class_probability)
     self.button_2.visible = True
 
     self.rich_text_1.content = 'CNN (PyTorch) Model Performance'
@@ -118,7 +118,7 @@ class Form1(Form1Template):
     self.label_4.visible = False
     self.status_text.text = "Processed"
     self.label_3.text = 'Class: '+str(predicted_class)
-    self.label_2.text = 'Model Accuracy: '+str(class_probability)
+    # self.label_2.text = 'Model Accuracy: '+str(class_probability)
     self.button_2.visible = True
 
     self.rich_text_1.content = 'Transformer Model Performance'
@@ -136,7 +136,7 @@ class Form1(Form1Template):
     self.label_4.visible = False
     self.status_text.text = "Processed"
     self.label_3.text = 'Class: '+str(predicted_class)
-    self.label_2.text = 'Model Accuracy: '+str(class_probability)
+    # self.label_2.text = 'Model Accuracy: '+str(class_probability)
     self.button_2.visible = True
 
     self.rich_text_1.content = 'CNN (Tensorflow) Model Performance'

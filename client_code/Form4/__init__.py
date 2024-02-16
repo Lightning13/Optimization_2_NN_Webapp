@@ -16,7 +16,7 @@ class Form4(Form4Template):
     # Any code you write here will run before the form opens.
     anvil.users.login_with_form()
   
-    file = 'test_html_text.txt'
+    file = 'test_html_text_2.txt'
     self.rich_text_2.content = anvil.server.call('read_about',file)
 
     

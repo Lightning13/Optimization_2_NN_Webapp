@@ -13,9 +13,130 @@ components:
     type: RichText
     layout_properties: {grid_position: 'SFHDEN,JTXSYL'}
   - name: rich_text_2
-    properties: {}
+    properties: {content: "**Transformer**\n\nThe pursuit of exceeding 99% accuracy\
+        \ in **MNIST digit recognition** using **Transformer models** holds profound\
+        \ implications for automated document processing and handwriting recognition.\
+        \ This project, bridging theoretical exploration with empirical optimization,\
+        \ aims to set a new benchmark in neural network performance for complex pattern\
+        \ recognition.\n\n**Initial Model Configuration and Adjustments**\n\nIn the\
+        \ quest for optimizing a transformer neural network for MNIST digit recognition,\
+        \ the iterative experimentation process played a pivotal role in approaching\
+        \ the ambitious accuracy target of greater than 99%. Starting from a baseline\
+        \ established in class, with a network configuration of 32 hidden dimensions,\
+        \ 4 layers and heads, a dropout rate of 0.1, and running for 5 epochs achieving\
+        \ a validation accuracy of 95.07%, the journey through various architectural\
+        \ adjustments revealed valuable insights into the network's performance sensitivity\
+        \ to specific hyperparameters.\n\nThe dimensions of key were not tuned as\
+        \ it is inherently dependent on the number of attention heads and hidden layer\
+        \ dimensions. Despite achieving a baseline validation accuracy of 95.07%,\
+        \ it became evident that nuanced modifications were essential. Incremental\
+        \ improvements, such as extending training epochs to 100 and adjusting the\
+        \ dropout rate to 0.05, systematically enhanced accuracy to 97.67%.\n\n**Strategic\
+        \ Enhancements and Hyperparameter Exploration**\n\nThe experimentation phase,\
+        \ encapsulated in a sequence of iterations, was methodically planned to scrutinize\
+        \ each aspect of the network's architecture. One of the early revelations\
+        \ was the impact of training duration on model performance. By extending the\
+        \ number of epochs to 100, a notable increase in validation accuracy to 97.67%\
+        \ was observed, indicating that the initial model was underfitting and could\
+        \ benefit from additional training time. However, this finding also underscored\
+        \ the delicate balance between training duration and the risk of overfitting,\
+        \ prompting the optimization of other network parameters to achieve improvements\
+        \ in accuracy.\n\nAdjustments to the dropout rate provided further insights\
+        \ into the model's behavior, with a slight decrease to 0.05 leading to a consistent\
+        \ improvement over the initial rate of 0.1. This suggested that a lower level\
+        \ of regularization was more conducive to the model's learning process, possibly\
+        \ due to the relatively simple nature of the MNIST dataset or the inherent\
+        \ regularization effect of the transformer architecture.\n\nVarying the number\
+        \ of attention heads and layers further refined the network's architecture,\
+        \ revealing a nuanced understanding of how these parameters influence the\
+        \ model's ability to learn and generalize. The observation that 8 attention\
+        \ heads provided a balance between complexity and performance, especially\
+        \ in comparison to other configurations, emphasized the role of attention\
+        \ mechanisms in achieving high accuracy.\n\nA meticulous analysis of hyperparameters,\
+        \ including attention heads, layer depth, hidden dimensions, and MLP size,\
+        \ was undertaken. This exploration was driven by a dual objective: to augment\
+        \ the model's capacity for nuanced pattern recognition and to mitigate the\
+        \ risk of overfitting. These calculated adjustments led to a peak accuracy\
+        \ of 98.67%, demonstrating the critical role of hyperparameter tuning in achieving\
+        \ advanced model performance.\n\n**Testing and Results Analysis**\n\nExploring\
+        \ the dimensions of the network, particularly the hidden dimension and MLP\
+        \ size, highlighted the significance of model capacity in capturing the complexities\
+        \ of the dataset. Increasing the hidden dimension to 64 and subsequently adjusting\
+        \ the MLP dimension to 128 emerged as key factors in elevating the model's\
+        \ performance, culminating in a peak validation accuracy of 98.67%. This iterative\
+        \ process not only underscored the importance of model capacity but also the\
+        \ diminishing returns and increased computational cost associated with excessively\
+        \ large models.\n\nAfter the model was fine-tuned using 20% of the data for\
+        \ validation, it underwent training on the complete dataset prior to evaluation\
+        \ against the test set. This approach was selected to ensure robust generalization\
+        \ before final testing. The training process was deliberately halted at the\
+        \ 15th epoch, deviating from the initially planned 40 epochs. This decision\
+        \ was informed by the observation that training accuracy had plateaued, indicating\
+        \ a point of diminishing returns where additional training would likely not\
+        \ yield significant improvement and could risk overfitting. This preemptive\
+        \ stop was a strategic move to preserve model generalizability.\n\nThe performance\
+        \ of the final model on the test set was remarkable, achieving a test accuracy\
+        \ of 98.9%. This outcome signifies the effectiveness of the chosen training\
+        \ strategy and model configuration adjustments throughout the optimization\
+        \ process.\n\nThe graph below displays the incremental improvements in validation\
+        \ accuracy achieved through successive rounds of hyperparameter tuning for\
+        \ a Transformer model. \n"}
     type: RichText
     layout_properties: {grid_position: 'DLIKWH,ZNYANY'}
+  - name: image_1
+    properties: {source: _/theme/Picture1.png}
+    type: Image
+    layout_properties: {grid_position: 'KXQTSV,JIVLGN'}
+  - name: rich_text_3
+    properties: {content: 'Each adjustment, such as extending epochs, modifying dropout
+        rates, and tweaking model dimensions, offers a clear impact—most notably,
+        extending epochs shows the largest single improvement. The final adjustments
+        lead to a cumulative increase in accuracy, demonstrating the effectiveness
+        of methodical hyperparameter optimization.
+
+
+        **Breakthroughs and Challenges**
+
+
+        The optimization journey was marked by significant achievements, such as the
+        attainment of a peak accuracy of 98.67%. Despite these optimizations, the
+        final network configuration, with a validation accuracy of 98.67%, fell short
+        of the 99% target. This outcome highlights the inherent challenges in neural
+        network optimization, where each incremental improvement requires careful
+        consideration of the trade-offs involved. The reliance on a validation set
+        approach, necessitated by the computational demands of training, also points
+        to the limitations of this methodology in achieving the most generalized model
+        possible.
+
+
+        This phase was instrumental in delineating future research pathways, emphasizing
+        the necessity for innovative problem-solving approaches. The insights advocate
+        for a comprehensive approach to surpassing current accuracy benchmarks. Proposed
+        strategies encompass advanced regularization techniques, adaptive learning
+        rate schedules, and exploratory data augmentation methods.
+
+
+        **Conclusion**
+
+
+        To bridge the gap towards the 99% or even the aspirational 99.5% accuracy
+        goal, further exploration beyond the current hyperparameter space would be
+        essential. Techniques such as learning rate optimization, advanced regularization
+        methods, and possibly exploring different optimizer configurations or data
+        augmentation strategies could provide the needed edge. Additionally, adopting
+        more sophisticated methods like ensembling or leveraging a larger diversity
+        of data through augmentation might be crucial steps in surpassing the current
+        accuracy plateau.
+
+
+        This detailed exploration into optimizing Transformer models for MNIST digit
+        recognition encapsulates a harmonious blend of theoretical rigor and practical
+        experimentation. This journey, while not achieving the target accuracy, underscores
+        the intricate process of hyperparameter tuning in machine learning. It reflects
+        a commitment to advancing the field, providing insights that serve as a springboard
+        for further research and application in digit recognition and broader AI challenges.'}
+    type: RichText
+    layout_properties: {grid_position: 'LZEQNB,GQGDTU'}
 - type: FlowPanel
   properties: {}
   name: navbar_links

@@ -14,8 +14,8 @@ class CNN_About(CNN_AboutTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    file = 'test_html_text.txt'
-    self.rich_text_2.content = anvil.server.call('read_about',file)
+    # file = 'test_html_text.txt'
+    # self.rich_text_2.content = anvil.server.call('read_about',file)
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
