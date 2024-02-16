@@ -24,6 +24,12 @@ components:
     properties: {content: '**Learn about our components:**', font_size: 15}
     type: RichText
     layout_properties: {grid_position: 'KUYQQE,OBNYMR'}
+    components:
+    - name: link_4
+      properties: {align: center, text: Link to our Medium Article, bold: true, icon: 'fa:external-link-square',
+        font_size: 18}
+      type: Link
+      event_bindings: {click: link_4_click}
   - name: button_2
     properties: {text: CNN model, icon: 'fa:info', role: elevated-button}
     type: Button
@@ -49,12 +55,6 @@ components:
     type: Button
     layout_properties: {grid_position: 'BERJSO,DOELFR'}
     event_bindings: {click: button_1_click}
-  - name: link_4
-    properties: {align: center, text: Link to our Medium Article, bold: true, icon: 'fa:external-link-square',
-      font_size: 18}
-    type: Link
-    layout_properties: {grid_position: 'DANDLJ,KHBIRA'}
-    event_bindings: {click: link_4_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
@@ -68,6 +68,10 @@ components:
   type: LinearPanel
   layout_properties: {slot: left-nav}
   components:
+  - name: label_2
+    properties: {text: Welcome, bold: true, background: 'theme:Tertiary Container'}
+    type: Label
+    layout_properties: {}
   - name: link_1
     properties: {text: Models, bold: true}
     type: Link

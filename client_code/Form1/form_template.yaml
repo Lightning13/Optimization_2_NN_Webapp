@@ -18,6 +18,23 @@ components:
       font: Arial}
     type: Label
     layout_properties: {grid_position: 'EQTOGH,LQFLFY'}
+  - name: rich_text_2
+    properties: {content: '**How to use:**
+
+        1. Upload a 28 x 28 .csv file with no header row.
+
+        Each entry may be the 0-255 pixel intensity, or the scaled 0-1 pixel
+
+        intensity;
+
+        2. View the uploaded file as an image
+
+        3. Choose which model you would like to run to predict the image class
+
+        4. use the Retry button to reset page', font_size: 14, background: 'theme:Surface
+        Variant'}
+    type: RichText
+    layout_properties: {grid_position: 'KTTFXJ,VCDKDO'}
   - name: uploader
     properties: {align: center, file_types: .csv, text: Upload, font_size: 18, spacing_above: small,
       spacing_below: none, italic: false, bold: true, underline: true, multiple: false}
@@ -26,7 +43,8 @@ components:
     event_bindings: {change: uploader_change}
     data_bindings: []
   - name: label_4
-    properties: {align: center, text: '  Please upload a 28 x 28 csv file', spacing_above: none}
+    properties: {align: center, text: '  Please upload a 28 x 28 csv file', spacing_above: none,
+      font_size: 16, bold: true}
     type: Label
     layout_properties: {grid_position: 'YRXRSG,YZCLYQ'}
   - name: spacer_2
@@ -41,7 +59,7 @@ components:
     data_bindings: []
     event_bindings: {}
   - name: rich_text_1
-    properties: {align: center, content: ''}
+    properties: {align: center, content: '', font_size: 25}
     type: RichText
     layout_properties: {grid_position: 'DXNWTL,IEYHLW TZKUQB,ZENFUN'}
   - name: button_3
@@ -96,6 +114,10 @@ components:
     type: Link
     layout_properties: {}
     event_bindings: {click: link_3_click}
+  - name: label_2
+    properties: {text: Models, bold: true, background: 'theme:Tertiary Container'}
+    type: Label
+    layout_properties: {}
   - name: link_1
     properties: {text: Meet The Team, bold: true}
     type: Link

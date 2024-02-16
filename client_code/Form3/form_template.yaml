@@ -47,3 +47,7 @@ components:
     type: Link
     layout_properties: {}
     event_bindings: {click: link_2_click}
+  - name: label_2
+    properties: {text: About, bold: true, background: 'theme:Tertiary Container'}
+    type: Label
+    layout_properties: {}

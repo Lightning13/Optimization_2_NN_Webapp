@@ -58,7 +58,8 @@ components:
   name: navbar_links
   layout_properties: {slot: nav-right}
 - name: button_1
-  properties: {text: Go Back, icon: 'fa:arrow-left'}
+  properties: {text: Go Back, icon: 'fa:arrow-left', background: 'theme:Secondary
+      Container'}
   type: Button
   layout_properties: {slot: title}
   event_bindings: {click: button_1_click}

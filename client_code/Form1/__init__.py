@@ -33,6 +33,8 @@ class Form1(Form1Template):
           #Process the image
           self.image_1.source, self.gv_data = anvil.server.call('display_image', file)
           self.label_4.text ='File converted to image'
+          self.uploader.visible = False
+          self.rich_text_2.visible = False
           self.button_3.visible = True
           self.button_4.visible = True
           self.button_5.visible = True
@@ -77,6 +79,7 @@ class Form1(Form1Template):
     # self.label_2.text = ''
     self.image_1.source = "_/theme/SvckSy7fFviqrq8ClF.gif"
     self.uploader.visible = True
+    self.rich_text_2.visible = True
     self.label_4.visible = True
     self.button_2.visible = False
     self.status_text.text = "Ready for new file"
@@ -96,6 +99,7 @@ class Form1(Form1Template):
     predicted_class,class_probability = anvil.server.call('process_csv', self.gv_data,2)
     #Hide/Unhide buttons
     self.uploader.visible = False
+    self.rich_text_2.visible = False
     self.label_4.visible = False
     self.status_text.text = "Processed"
     self.label_3.text = 'Class: '+str(predicted_class)
@@ -115,6 +119,7 @@ class Form1(Form1Template):
     predicted_class,class_probability = anvil.server.call('process_csv', self.gv_data,1)
     #Hide/Unhide buttons
     self.uploader.visible = False
+    self.rich_text_2.visible = False
     self.label_4.visible = False
     self.status_text.text = "Processed"
     self.label_3.text = 'Class: '+str(predicted_class)
@@ -133,6 +138,7 @@ class Form1(Form1Template):
     predicted_class,class_probability = anvil.server.call('process_csv', self.gv_data,3)
     #Hide/Unhide buttons
     self.uploader.visible = False
+    self.rich_text_2.visible = False
     self.label_4.visible = False
     self.status_text.text = "Processed"
     self.label_3.text = 'Class: '+str(predicted_class)

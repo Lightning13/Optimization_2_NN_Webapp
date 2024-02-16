@@ -143,24 +143,74 @@ components:
         **Testing and Results Analysis**
 
 
-        Upon comparing the outcomes from both **TensorFlow** and **PyTorch** models,
-        it was evident that while each framework offers unique advantages, the core
-        principles of effective network design—such as strategic layering and judicious
-        use of regularization techniques—remain constant. Our experiments did not
-        yield a significant difference in the final accuracy between the two models,
-        with both achieving and marginally surpassing the 99.5% accuracy mark on the
-        validation set. This parity in performance underscores the notion that the
-        choice between **TensorFlow** and **PyTorch** may come down to personal preference
-        or specific project requirements rather than inherent superiority in handling
-        image classification tasks.'}
+        Our PyTorch model also demonstrated impressive performance on the MNIST dataset,
+        with only a few instances of misclassification. Specifically, the model misclassified
+        the digit ''1'' as ''2'', ''6'' as ''8'', and ''7'' as ''3''. While the overall
+        accuracy remains high, these misclassifications provide valuable insights
+        into areas where the model could be further refined'}
     type: RichText
     layout_properties: {grid_position: 'DLIKWH,ZNYANY'}
+  - name: label_1
+    properties: {text: 1 MISCLASSIFIED AS 2, align: center, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'PVBMVA,FBWBHX'}
+  - name: label_2
+    properties: {text: 6 MISCLASSIFIED AS 8, align: center, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'PVBMVA,VXYPYR'}
+  - name: label_3
+    properties: {text: 7 MISCLASSIFIED AS 3, bold: true, align: center}
+    type: Label
+    layout_properties: {grid_position: 'PVBMVA,HUIXBH'}
+  - name: image_1
+    properties: {source: _/theme/1_missclassified.png, height: 257.75, spacing_above: none,
+      spacing_below: none}
+    type: Image
+    layout_properties: {grid_position: 'DGFUNY,MQNDYS'}
+  - name: image_2
+    properties: {source: _/theme/6_misclassified.png, height: 256.75, spacing_above: none,
+      spacing_below: none}
+    type: Image
+    layout_properties: {grid_position: 'DGFUNY,UFILDN'}
+  - name: image_3
+    properties: {source: _/theme/7_misclassified.png, height: 255.75, spacing_above: none,
+      spacing_below: none}
+    type: Image
+    layout_properties: {grid_position: 'DGFUNY,PNDOFH'}
+  - name: rich_text_3
+    properties: {content: 'The misclassification of ''1'' as ''2'' and ''7'' as ''3''
+        might be attributed to the similarity in certain handwritten forms of these
+        digits. For instance, a ''1'' with a longer top stroke could resemble a ''2'',
+        and a ''7'' with a curved line might be mistaken for a ''3''. The confusion
+        between ''6'' and ''8'' could arise from the closed loop in their structures,
+        where a slightly distorted ''6'' might appear similar to an ''8''.
+
+
+        To address these issues, further fine-tuning of the model could be considered.
+        For example, increasing the complexity of the convolutional layers or adjusting
+        the dropout rates might help the model better distinguish between similar-looking
+        digits. Additionally, augmenting the training dataset with more varied examples
+        of these challenging digits could improve the model''s ability to recognize
+        them correctly.
+
+
+        In conclusion, both our TensorFlow and PyTorch models have shown excellent
+        performance in classifying the MNIST dataset. While the TensorFlow model achieved
+        perfect accuracy, the PyTorch model''s few misclassifications offer opportunities
+        for further refinement. These results underscore the effectiveness of our
+        CNN architectures and the importance of continual optimization to enhance
+        model performance.
+
+        '}
+    type: RichText
+    layout_properties: {grid_position: 'NVMAMB,EPVCWX'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
 - name: button_1
-  properties: {text: Go Back, icon: 'fa:arrow-left'}
+  properties: {text: Go Back, icon: 'fa:arrow-left', background: 'theme:Secondary
+      Container'}
   type: Button
   layout_properties: {slot: title}
   event_bindings: {click: button_1_click}

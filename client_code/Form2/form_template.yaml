@@ -47,20 +47,24 @@ components:
         properties: {text: Rahul, align: center}
         type: Label
         layout_properties: {grid_position: 'RBXSMQ,QEANPU'}
-    - name: link_5
-      properties: {text: ''}
-      type: Link
-      layout_properties: {}
-      components:
-      - name: image_3
-        properties: {source: _/theme/da1eafa3-e96c-43bc-a8d1-92c70df52514.jpg}
-        type: Image
-        layout_properties: {grid_position: 'LLUEHP,YPNDWQ'}
-      - name: label_6
-        properties: {text: Hayoung, align: center}
-        type: Label
-        layout_properties: {grid_position: 'QBJQID,PRBCZE'}
-      event_bindings: {click: link_5_click}
+  - name: spacer_1
+    properties: {height: 119.5}
+    type: Spacer
+    layout_properties: {grid_position: 'OAGWFI,BGDDVM OBHPOF,QGGWHV'}
+  - name: link_5
+    properties: {text: ''}
+    type: Link
+    layout_properties: {grid_position: 'OAGWFI,BGDDVM YNZRPV,VLOJQM'}
+    components:
+    - name: image_3
+      properties: {source: _/theme/da1eafa3-e96c-43bc-a8d1-92c70df52514.jpg}
+      type: Image
+      layout_properties: {grid_position: 'SIGDZO,XYPCAL'}
+    - name: label_6
+      properties: {text: Hayoung, align: center}
+      type: Label
+      layout_properties: {grid_position: 'YHGOBU,TCVVJT'}
+    event_bindings: {click: link_5_click}
   - name: link_6
     properties: {}
     type: Link
@@ -69,12 +73,12 @@ components:
       properties: {source: _/theme/Screenshot 2024-02-03 005402.png}
       type: Image
       layout_properties: {grid_position: 'HZZDTX,WGCVTO'}
+    - name: label_3
+      properties: {text: June, align: center}
+      type: Label
+      layout_properties: {grid_position: 'MSNJHP,WEGNLC'}
     event_bindings: {click: link_6_click}
     layout_properties: {grid_position: 'OAGWFI,YLIRKJ CHVPXM,DXBDFM'}
-  - name: label_3
-    properties: {text: June, align: center}
-    type: Label
-    layout_properties: {grid_position: 'OAGWFI,YLIRKJ OUMLPF,KSUGVX'}
   - name: link_4
     properties: {text: ''}
     type: Link
@@ -112,6 +116,10 @@ components:
     type: Link
     layout_properties: {}
     event_bindings: {click: link_1_click}
+  - name: label_7
+    properties: {text: Meet The Team, bold: true, background: 'theme:Tertiary Container'}
+    type: Label
+    layout_properties: {}
   - name: link_2
     properties: {text: About, bold: true}
     type: Link
