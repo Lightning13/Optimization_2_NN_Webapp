@@ -152,5 +152,10 @@ class Form1(Form1Template):
     gv_data = []
     pass
 
+  def link_4_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    self.link_4.url = 'https://github.com/Lightning13/Optimization_2_NN_Webapp/tree/c76500fd0910e93eafdc8ac3880fde30c6d767fb/test_files'
+    pass
+
 
 
