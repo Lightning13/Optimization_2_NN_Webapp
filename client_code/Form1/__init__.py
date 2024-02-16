@@ -143,6 +143,7 @@ class Form1(Form1Template):
     self.button_3.visible = False
     self.button_4.visible = False
     self.button_5.visible = False
+    gv_data = []
     pass
 
 
