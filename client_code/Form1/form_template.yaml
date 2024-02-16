@@ -86,10 +86,24 @@ components:
     type: Button
     layout_properties: {grid_position: 'DXNWTL,IEYHLW WRPITC,CMUQMC'}
     event_bindings: {click: button_4_click}
+  - name: button_1
+    properties: {text: All Models, background: 'theme:Secondary Container', role: elevated-button,
+      bold: true}
+    type: Button
+    layout_properties: {grid_position: 'DXNWTL,IEYHLW WRPITC,EFXVPQ'}
+    event_bindings: {click: button_1_click}
   - name: label_3
     properties: {align: center, bold: true, underline: true, font_size: 19}
     type: Label
     layout_properties: {grid_position: 'DXNWTL,IEYHLW SJZLRH,LHZRZP'}
+  - name: label_5
+    properties: {align: center, bold: true, underline: true, font_size: 19}
+    type: Label
+    layout_properties: {grid_position: 'DXNWTL,IEYHLW JDBNJX,DHHOEC'}
+  - name: label_6
+    properties: {font_size: 19, underline: true, bold: true, align: center}
+    type: Label
+    layout_properties: {grid_position: 'DXNWTL,IEYHLW TBPWQX,AAVXOO'}
   - name: button_2
     properties: {text: 'Retry?', role: elevated-button, bold: true, underline: false,
       font_size: 19, icon_align: left, background: 'theme:Primary Container', foreground: ''}

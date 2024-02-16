@@ -19,6 +19,7 @@ class Form1(Form1Template):
     self.button_3.visible = False
     self.button_4.visible = False
     self.button_5.visible = False
+    self.button_1.visible = False
     self.label_4.text ='Please upload a 28 x 28 csv file'
     # Any code you write here will run before the form opens.
 
@@ -38,6 +39,7 @@ class Form1(Form1Template):
           self.button_3.visible = True
           self.button_4.visible = True
           self.button_5.visible = True
+          self.button_1.visible = True
           self.rich_text_1.content = 'Which Model would you like to try?'
         elif validate == 1:
           self.status_text.text = "File is not 28 x 28. Please upload a valid file"
@@ -76,6 +78,8 @@ class Form1(Form1Template):
     """This method is called when the button is clicked"""
     self.uploader.clear()
     self.label_3.text = ''
+    self.label_5.text = ''
+    self.label_6.text = ''
     # self.label_2.text = ''
     self.image_1.source = "_/theme/SvckSy7fFviqrq8ClF.gif"
     self.uploader.visible = True
@@ -110,6 +114,7 @@ class Form1(Form1Template):
     self.button_3.visible = False
     self.button_4.visible = False
     self.button_5.visible = False
+    self.button_1.visible = False
   
     pass
 
@@ -130,6 +135,7 @@ class Form1(Form1Template):
     self.button_3.visible = False
     self.button_4.visible = False
     self.button_5.visible = False
+    self.button_1.visible = False
     pass
 
   def button_5_click(self, **event_args):
@@ -149,12 +155,37 @@ class Form1(Form1Template):
     self.button_3.visible = False
     self.button_4.visible = False
     self.button_5.visible = False
+    self.button_1.visible = False
     gv_data = []
     pass
 
   def link_4_click(self, **event_args):
     """This method is called when the link is clicked"""
     self.link_4.url = 'https://github.com/Lightning13/Optimization_2_NN_Webapp/tree/c76500fd0910e93eafdc8ac3880fde30c6d767fb/test_files'
+    pass
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.status_text.text = "All models running"
+    predicted_class_2,class_probability = anvil.server.call('process_csv', self.gv_data,2)
+    predicted_class_1,class_probability = anvil.server.call('process_csv', self.gv_data,1)
+    predicted_class_3,class_probability = anvil.server.call('process_csv', self.gv_data,3)
+    #Hide/Unhide buttons
+    self.uploader.visible = False
+    self.rich_text_2.visible = False
+    self.label_4.visible = False
+    self.status_text.text = "Processed"
+    self.label_3.text = 'CNN (PyTorch) Class: '+str(predicted_class_2)
+    self.label_5.text = 'Transformer Class: '+str(predicted_class_1)
+    self.label_6.text = 'CNN (TensorFlow) Class: '+str(predicted_class_3)
+    # self.label_2.text = 'Model Accuracy: '+str(class_probability)
+    self.button_2.visible = True
+
+    self.rich_text_1.content = 'All Models Performance'
+    self.button_3.visible = False
+    self.button_4.visible = False
+    self.button_5.visible = False
+    self.button_1.visible = False
     pass
 
 

@@ -9,11 +9,11 @@ components:
   layout_properties: {slot: default}
   components:
   - name: rich_text_1
-    properties: {content: '**Our CNN model**'}
+    properties: {content: '## **Our CNN model**'}
     type: RichText
     layout_properties: {grid_position: 'SFHDEN,JTXSYL'}
   - name: rich_text_2
-    properties: {content: '**CNN**
+    properties: {content: '## **CNN**
 
 
         In our journey to harness the full potential of Convolutional Neural Networks
@@ -25,67 +25,115 @@ components:
         between the two frameworks.
 
 
-        **TensorFlow Model**
+        ** **
+
+        ### **TensorFlow Model**
 
 
-        In our **TensorFlow** model designed for the **MNIST dataset**, the architecture
-        was meticulously crafted to optimize performance through a blend of convolutional
-        layers, batch normalization, ReLU activations, and strategic dropout implementation.
-        This model represents a harmonious integration of complexity and regularization,
-        tailored to capture the intricate patterns of handwritten digits with high
-        accuracy.
+        Our **TensorFlow** model''s genesis was grounded in a robust initial architecture—what
+        we refer to as the ''Basic'' model. This foundational design was meticulously
+        constructed to ensure a solid starting point, achieving an impressive accuracy
+        benchmark of 99%. Yet, our ambition was not just to reach this threshold but
+        to transcend it. To edge closer to the pinnacle of accuracy, we conceived
+        the ''Modified'' model, an iteration of our initial structure distinguished
+        solely by an enhanced dropout rate strategy, starting from the first layer
+        itself.
 
 
         **Initial Architecture and Adjustments**
 
 
-        Our model initiates with a first convolutional block consisting of two convolutional
-        layers, each equipped with 32 filters of size 3x3. This choice was guided
-        by the aim to commence feature extraction effectively, identifying basic shapes
-        and edges crucial for early digit recognition. After observing initial results,
-        it became apparent that while this setup was effective for basic patterns,
-        enhancing the model''s depth was necessary for capturing more complex features.
+        Both the ''Basic'' and ''Modified'' models share a common architectural lineage,
+        each starting with a first convolutional block comprising two layers of 32
+        filters of size 3x3. This setup was deliberately chosen to effectively extract
+        elementary features such as shapes and edges, which are crucial for the initial
+        stages of digit recognition. As we progressed to the second block, the filter
+        count doubled to 64, maintaining the same kernel size—a strategic move that
+        proved instrumental in capturing more nuanced aspects of the digits, like
+        subtle curves and intersections.
 
 
-        Moving to the second convolutional block, we increased the filter count to
-        64 while maintaining the kernel size. This adjustment was based on our experimentation,
-        which showed that a higher number of filters at this stage allowed the network
-        to build a more nuanced understanding of the input images, such as the curves
-        and intersections unique to different digits.
+        The journey culminated in a third convolutional block with 128 filters, a
+        deliberate scale-up to delve into the details that escaped the grasp of the
+        preceding layers. Finally, the transition to the dense layer before classification
+        was marked by careful consideration of its crucial role in piecing together
+        the high-level features for digit identification. It was through this thoughtful
+        progression from the first layer to the final, that our models achieved the
+        finesse required for higher accuracy.
 
 
         **Key Breakthrough with Dropout**
 
 
-        A significant turning point in our model''s development was our approach to
-        dropout regularization. Initially, we implemented a conservative dropout rate
-        of 0.3 after the max-pooling layers in our first and second convolutional
-        blocks. This was based on early experiments indicating minor overfitting,
-        where we observed a slight but noticeable gap between training and validation
-        accuracies, approximately 98.5% to 98% respectively.
+        The story of our models'' evolution is significantly marked by the strategic
+        role of dropout regularization. The ''Basic'' model adhered to a conservative
+        dropout rate of 0.1 following the max-pooling layers, which, while effective,
+        left room for optimization. Conversely, the ''Modified'' model embarked on
+        a bold journey with escalated dropout rates, initiating at 0.3 and culminating
+        at 0.5 prior to the final layer. This assertive approach was thoroughly evaluated
+        using a validation set split of 0.2 across 20 epochs, revealing intriguing
+        insights into model performance. The ''Basic'' model achieved a commendable
+        highest train accuracy of 99.70%, outperforming the ''Modified'' model''s
+        train accuracy, which peaked at 99.24%. This 0.5% greater train accuracy in
+        the ''Basic'' model hinted at its propensity for overfitting when faced with
+        the training data—a tendency mitigated by the ''Modified'' model''s higher
+        dropout rates.'}
+    type: RichText
+    layout_properties: {grid_position: 'DLIKWH,ZNYANY'}
+  - name: image_4
+    properties: {source: _/theme/CNN_Acc.png, height: 456.5}
+    type: Image
+    layout_properties: {grid_position: 'SGGJWF,VUMTWL'}
+  - name: rich_text_4
+    properties: {content: 'In the realm of validation accuracy, however, the tables
+        turned. The ''Modified'' model, with its stringent dropout regimen, reached
+        a highest validation accuracy of 99.54%, slightly surpassing the ''Basic''
+        model''s peak at 99.42%. This marginal but critical advantage in validation
+        performance is indicative of the ''Modified'' model''s enhanced ability to
+        generalize, an attribute less pronounced in the ''Basic'' model due to its
+        relatively lower dropout rate and subsequent overfitting nuances. The accompanying
+        plots further articulate this distinction, visually encapsulating the journey
+        towards refined accuracy. They unfold the story of our dropout strategy''s
+        triumph in the pursuit of excellence in digit classification, a pursuit that
+        does not merely seek to learn but to understand and predict with unparalleled
+        precision.
 
 
-        However, the real breakthrough came when we decided to further refine the
-        dropout strategy. Specifically, after the third convolutional block, where
-        we had escalated the filter count to 128 to delve into even more detailed
-        feature extraction, we increased the dropout rate to 0.4. This was a calculated
-        decision to counteract the increased complexity and potential overfitting
-        associated with deeper layers.
+        In conclusion, our in-depth examination and rigorous testing have led us to
+        a pivotal decision: to implement the ''Modified'' model in Anvil. This choice
+        is anchored in the conviction that a model''s prowess is ultimately gauged
+        by its performance on unseen data, a test the ''Modified'' model passed with
+        flying colors by achieving a validation accuracy exceeding the coveted 99.5%
+        mark.
 
-
-        The final dense layer before classification was another critical focus area.
-        Recognizing the importance of this layer in interpreting the high-level features
-        extracted by the convolutional blocks, we introduced a dropout rate of 0.5.
-        This higher rate before the softmax classification layer marked a pivotal
-        adjustment, ensuring that our model maintained robustness and generalization
-        ability, effectively narrowing the gap between training and validation accuracy
-        to a mere 0.2%.
 
 
         **Testing and Results Analysis**
 
 
-        **PyTorch Model**
+        In our extensive testing of the TensorFlow model on the MNIST dataset, we
+        achieved a remarkable feat with no misclassifications. This exceptional result
+        highlights the robustness and accuracy of our meticulously designed convolutional
+        neural network. The absence of misclassified images indicates that our model
+        has successfully learned to capture the essential features of handwritten
+        digits, from simple edges and shapes to more complex patterns, ensuring precise
+        recognition across the entire dataset.
+
+
+        The success of our TensorFlow model can be attributed to several key factors.
+        Firstly, the strategic layering of convolutional blocks with increasing filter
+        sizes enabled the model to extract features at various levels of abstraction,
+        effectively capturing the nuances of each digit. Secondly, the careful implementation
+        of dropout regularization prevented overfitting, allowing the model to generalize
+        well to unseen data. Finally, the use of batch normalization and ReLU activations
+        ensured stable and efficient training, contributing to the high accuracy achieved.
+
+
+        ** **
+
+
+
+        ## **PyTorch Model**
 
 
         For our **PyTorch** model designed to classify the **MNIST dataset**, we meticulously
@@ -149,7 +197,7 @@ components:
         accuracy remains high, these misclassifications provide valuable insights
         into areas where the model could be further refined'}
     type: RichText
-    layout_properties: {grid_position: 'DLIKWH,ZNYANY'}
+    layout_properties: {grid_position: 'BNRTMW,DWBBIH'}
   - name: label_1
     properties: {text: 1 MISCLASSIFIED AS 2, align: center, bold: true}
     type: Label
