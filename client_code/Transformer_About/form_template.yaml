@@ -46,7 +46,16 @@ components:
         to 97.67%.
 
 
-        **Strategic Enhancements and Hyperparameter Exploration**
+
+        '}
+    type: RichText
+    layout_properties: {grid_position: 'DLIKWH,ZNYANY'}
+  - name: image_4
+    properties: {source: _/theme/transformer.png, height: 415}
+    type: Image
+    layout_properties: {grid_position: 'FHWDFW,EXMZVH'}
+  - name: rich_text_5
+    properties: {content: '**Strategic Enhancements and Hyperparameter Exploration**
 
 
         The experimentation phase, encapsulated in a sequence of iterations, was methodically
@@ -120,13 +129,11 @@ components:
         and tweaking model dimensions, offers a clear impact—most notably, extending
         epochs shows the largest single improvement. The final adjustments lead to
         a cumulative increase in accuracy, demonstrating the effectiveness of methodical
-        hyperparameter optimization.
-
-        '}
+        hyperparameter optimization.'}
     type: RichText
-    layout_properties: {grid_position: 'DLIKWH,ZNYANY'}
+    layout_properties: {grid_position: 'ZCHRHA,AYWMZE'}
   - name: image_1
-    properties: {source: _/theme/Picture1.png}
+    properties: {source: _/theme/Picture1.png, height: 377.75}
     type: Image
     layout_properties: {grid_position: 'KXQTSV,JIVLGN'}
   - name: rich_text_4
